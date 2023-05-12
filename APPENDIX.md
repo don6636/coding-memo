@@ -324,6 +324,10 @@ android {
             // libraries Gradle should build and package with your APK.
             abiFilters 'arm64-v8a', 'armeabi-v7a', 'armeabi'
         }
+
+        // [仅应声明于子module中]
+        // 用于将库自身的proguard配置 附加到主模块 or 嵌入到aar文件中
+        // consumerProguardFiles 'consumer-rules.pro'
     }
 
     // signingConfigs闭包要位于buildTypes闭包之前，否则无法在具体的<build-Type>中引用
