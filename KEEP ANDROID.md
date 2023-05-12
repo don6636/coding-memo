@@ -840,7 +840,7 @@ public class TitleLayout extends LinearLayout {
 
 ### Service
 
-> Service有两种状态：启动状态和绑定状态。启动状态下，主要用于执行后台计算；绑定状态下，主要用于和其他组件交互。Service可以同时处于两种状态。通过Context的 `startService` 启动，`bindService` 绑定；需要灵活地采用 `stopService` 和 `unBindService` 才能完全停止一个Service组件。
+> Service有两种状态：启动状态和绑定状态。启动状态下，主要用于执行后台计算；绑定状态下，主要用于和其他组件通信。Service可以同时处于两种状态。通过Context的 `startService` 启动，`bindService` 绑定；需要灵活地采用 `stopService` 和 `unBindService` 才能完全停止一个Service组件。
 >
 > ***ps:*** 启动Service时请务必使用<u>显式</u>Intent来确保应用的安全性，因为无法确定哪些Service将响应隐式Intent，且用户无法看到哪些Service已启动。从API21开始，使用隐式Intent调用 `bindService()`，系统会抛出异常。因此，请勿向Service声明intent filters。
 
