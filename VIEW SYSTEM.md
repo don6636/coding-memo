@@ -157,7 +157,7 @@ public void computeScroll() {
 
 ***ps:*** 不要对 *ACTION_DOWN* 事件返回 *false*，这将阻止系统 **分发/消费** 后续其他事件，因为它是所有触摸事件的起点。即只有在 `onTouchEvent()` 和 `dispatchTouchEvent()` 的 *ACTION_DOWN* 事件中返回 *true*，当前view才能处理本次<u>事件序列</u>。
 
-- 分发流程：`Activity -> Window(PhoneWindow) -> DecorView -> ViewGroup -> ... -> View(TouchTarget?)`
+- 分发流程：`Activity -> Window(PhoneWindow) -> DecorView(ViewGroup) -> ... -> View(TouchTarget?)`
 - 若View未能消费事件，则会反过来向Activity回传，Activity不处理就抛弃事件。
 - `dispatchTouchEvent` 分发事件，true自己处理，false继续分发
 - `onInterceptTouchEvent` 拦截事件，在 `dispatchTouchEvent()` 中调用
