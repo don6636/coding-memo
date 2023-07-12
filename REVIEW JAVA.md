@@ -219,7 +219,7 @@ public class F {
 - Java7 **try-with-resources** 语法自动关闭资源 `try (声明和初始化资源1;资源2..) { 使用资源; }`
 
   ```java
-try ( PrintWriter output = new PrintWriter(file) ) {
+  try ( PrintWriter output = new PrintWriter(file) ) {
       output.print();// output会自动关闭
   }
   ```
@@ -1214,7 +1214,7 @@ while(..) {
   - 继承RecursiveTask执行 **有返回值** 任务
 
   ```java
-RecursiveTask<T> task = new Task( );
+  RecursiveTask<T> task = new Task( );
   ForkJoinPool pool = new ForkJoinPool();
   T result = pool.invoke(task);// 获取总任务返回结果
   

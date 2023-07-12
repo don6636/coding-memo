@@ -475,8 +475,7 @@ public class MyAdapter extends BaseAdapter {
         if (convertView == null) {
             holder = new ViewHolder();
             // false参数表示不为该View添加父布局(若View有了父布局就不能再添加到ListView中了)
-            convertView = LayoutInflater.from(mContext)
-                .inflate(R.layout.item_list, parent, false);
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.item_list, parent, false);
             holder.tv = (TextView) convertView.findViewById(R.id.tv);
             holder.iv = (ImageView) convertView.findViewById(R.id.iv);
             convertView.setTag(holder);

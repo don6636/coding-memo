@@ -88,7 +88,7 @@
   ```
   
   ```kotlin
-  var myName: String? = "shaun"
+  var myName: String = "shaun"
   fun cook(name: String): Food {}
   cook(myName) // 正常运行，不可空变量传给不可空参数
   ```
@@ -219,7 +219,7 @@
   ```
   
   ```kotlin
-public fun sum(a:Int, b:Int): Int = a + b // public方法必须明确写出返回类型
+  public fun sum(a:Int, b:Int): Int = a + b // public方法必须明确写出返回类型
   ```
 
   - 无返回值的函数（类似于Java中的 _void_）
@@ -231,9 +231,9 @@ public fun sum(a:Int, b:Int): Int = a + b // public方法必须明确写出返�
   ```
   
   ```kotlin
-public fun printSum(a: Int, b: Int) {// 若返回Unit类型，可缺省（public方法也可缺省Unit）
+  public fun printSum(a: Int, b: Int) {// 若返回Unit类型，可缺省（public方法也可缺省Unit）
       print(a + b)
-}
+  }
   ```
   
   - 可变长参数函数 [函数的变长参数用 `vararg` 关键字标识]
@@ -243,7 +243,7 @@ public fun printSum(a: Int, b: Int) {// 若返回Unit类型，可缺省（public
       for (vt in v) {
           print(vt)
       }
-}
+  }
   // 调用
   fun main() {
       vars(1,2,3,4,5) // 输出12345
@@ -1263,7 +1263,7 @@ fun main() {
 - 扩展函数可以在已有类中添加新的方法，不会对原类做修改，定义形式为：
 
   ```kotlin
-fun receiverType.functionName (params) {
+  fun receiverType.functionName (params) {
       body
   }
   ```

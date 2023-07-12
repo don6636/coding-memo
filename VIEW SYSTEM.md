@@ -301,7 +301,7 @@ public boolean dispatchTouchEvent (MotionEvent e) {
       mLastX = x;
       mLastY = y;
       return super.dispatchTouchEvent(event);
-}
+  }
   ```
 
   ***ps:*** 除了子元素需要做处理外，父容器也要默认拦截除了DOWN以外的其他事件，这样当子元素调用 `getParent().requestDisallowInterceptTouchEvent(false);` 时，父容器才能继续拦截所需事件。
@@ -1294,9 +1294,9 @@ mPaint.setFlags(Paint.ANTI_ALIAS_FLAG | Paint.DITHER_FLAG);// 可同时设置多
     `clipPath()` 和 `clipRect()`
 
   ```java
-canvas.save();
+  canvas.save();
   canvas.clipXxx();
-canvas.drawXxx();
+  canvas.drawXxx();
   ...
   canvas.restore();
   ```
@@ -1922,7 +1922,7 @@ public class CircleView extends View {
   <ImageView
       android:layout_width="42dip"
       android:layout_height="42dip"
-      android:background="@drawable/图片ID|#00FF00" />
+      android:background="@drawable/图片ID | #00FF00" />
   ```
 
 
